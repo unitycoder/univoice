@@ -1,43 +1,19 @@
-﻿using System;
+using System;
 
 namespace Adrenak.UniVoice {
     /// <summary>
-    /// Responsible for playing audio that is sent to it. 
+    /// Responsible for handling incoming audio.
     /// You'd normally want a <see cref="UnityEngine.AudioSource"/> 
     /// based implementation to play the audio in Unity. But this class can 
-    /// be used in other ways just as streaming the received audio to a server
+    /// be used in other ways such as streaming the received audio to a server
     /// or writing it to a local file. It's just an audio output and the 
-    /// destination doesn't matter.
+    /// destination depends on your implementation.
     /// </summary>
     public interface IAudioOutput : IDisposable {
         /// <summary>
-        /// An ID associated with this audio output
+        /// Feeds a <see cref="AudioFrame"/> object to the audio output.
         /// </summary>
-        string ID { get; set; }
-
-        /// <summary>
-        /// Feeds the data to the output implementation 
-        /// </summary>
-        /// 
-        /// <param name="segmentIndex">
-        /// The index of the segment of samples from the audio
-        /// </param>
-        /// 
-        /// <param name="frequency">
-        /// The frequency/sampling rate of the audio
-        /// </param>
-        /// 
-        /// <param name="channelCount">
-        /// The number of channels in the audio
-        /// </param>
-        /// 
-        /// <param name="audioSamples">
-        /// The audio samples/segment being fed
-        /// </param>
-        void Feed(int segmentIndex,
-            int frequency,
-            int channelCount,
-            float[] audioSamples
-        );
+        /// <param name="frame">The audio data to be sent.</param>
+        void Feed(AudioFrame frame);
     }
 }
