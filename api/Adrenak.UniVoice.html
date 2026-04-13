@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Adrenak.UniVoice
    | UniVoice documentation ">
-    <meta name="generator" content="docfx 2.57.2.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,21 +87,57 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="Adrenak.UniVoice.ChatroomAgent.html">ChatroomAgent</a></h4>
-      <section><p>Provides the means to host or connect to a chatroom.</p>
+      <h4><a class="xref" href="Adrenak.UniVoice.ClientSession-1.html">ClientSession&lt;T&gt;</a></h4>
+      <section><p>Handles a client session. 
+Requires implementations of <a class="xref" href="Adrenak.UniVoice.IAudioClient-1.html">IAudioClient&lt;T&gt;</a>, <a class="xref" href="Adrenak.UniVoice.IAudioInput.html">IAudioInput</a> and <a class="xref" href="Adrenak.UniVoice.IAudioOutput.html">IAudioOutput</a>.
+Handles input, output along with filters over the entire client lifecycle.
+Adjusts to changes in configuration at runtime.</p>
 </section>
-      <h4><a class="xref" href="Adrenak.UniVoice.ChatroomPeerSettings.html">ChatroomPeerSettings</a></h4>
-      <section><p>Represents settings associated with a peer in the chatroom</p>
+      <h4><a class="xref" href="Adrenak.UniVoice.EmptyAudioInput.html">EmptyAudioInput</a></h4>
+      <section><p>An audio input implementation that doesn&apos;t do anything.
+Use this when the device doesn&apos;t have any input mode. 
+This is especially useful when setting up the ClientSession
+object on a dedicated server that likely isn&apos;t going to have 
+and mic or other audio capture devices.</p>
 </section>
-      <h4><a class="xref" href="Adrenak.UniVoice.Extensions.html">Extensions</a></h4>
+      <h4><a class="xref" href="Adrenak.UniVoice.SimpleVad.html">SimpleVad</a></h4>
+      <section><p>A minimal, adaptive voice activity detector operating on time-domain PCM.
+Supports float [-1,1] and 16-bit samples, with per-call adaptation to
+input frequency and channel count. Multi-channel input is downmixed to mono.</p>
+</section>
+      <h4><a class="xref" href="Adrenak.UniVoice.SimpleVad.Config.html">SimpleVad.Config</a></h4>
+      <section><p>Configuration for the MiniVad voice activity detector.
+All time-based parameters are expressed in milliseconds.</p>
+</section>
+      <h4><a class="xref" href="Adrenak.UniVoice.Utils.html">Utils</a></h4>
       <section></section>
+      <h4><a class="xref" href="Adrenak.UniVoice.Utils.Audio.html">Utils.Audio</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Adrenak.UniVoice.Utils.Bytes.html">Utils.Bytes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Adrenak.UniVoice.Utils.Network.html">Utils.Network</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Adrenak.UniVoice.VoiceSettings.html">VoiceSettings</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Adrenak.UniVoice.WavFileWriter.html">WavFileWriter</a></h4>
+      <section><p>A utility to write audio samples to a file on disk. 
+Construct using the path you want to store the audio file at.
+Invoke Write with the sampling frequency, channel count and PCM samples
+and it will lazily initialize.</p>
+</section>
     <h3 id="structs">Structs
   </h3>
-      <h4><a class="xref" href="Adrenak.UniVoice.ChatroomAudioDTO.html">ChatroomAudioDTO</a></h4>
-      <section><p>A data structure representing the audio transmitted over the network.</p>
-</section>
+      <h4><a class="xref" href="Adrenak.UniVoice.AudioFrame.html">AudioFrame</a></h4>
+      <section></section>
     <h3 id="interfaces">Interfaces
   </h3>
+      <h4><a class="xref" href="Adrenak.UniVoice.IAudioClient-1.html">IAudioClient&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a></h4>
+      <section><p>Offers ways to modify audio after being captured.
+To prevent the audio from being sent (for example when performing some pass or gating)
+return an empty byte array (new byte[0])</p>
+</section>
       <h4><a class="xref" href="Adrenak.UniVoice.IAudioInput.html">IAudioInput</a></h4>
       <section><p>Source of user voice input. This would usually be implemented 
 over a microphone to get the users voice. But it can also be used
@@ -109,26 +145,18 @@ in other ways such as streaming an mp4 file from disk. It&apos;s just
 an input and the source doesn&apos;t matter.</p>
 </section>
       <h4><a class="xref" href="Adrenak.UniVoice.IAudioOutput.html">IAudioOutput</a></h4>
-      <section><p>Responsible for playing audio that is sent to it. 
+      <section><p>Responsible for handling incoming audio.
 You&apos;d normally want a <see cref="!:UnityEngine.AudioSource"></see> 
 based implementation to play the audio in Unity. But this class can 
-be used in other ways just as streaming the received audio to a server
+be used in other ways such as streaming the received audio to a server
 or writing it to a local file. It&apos;s just an audio output and the 
-destination doesn&apos;t matter.</p>
+destination depends on your implementation.</p>
 </section>
       <h4><a class="xref" href="Adrenak.UniVoice.IAudioOutputFactory.html">IAudioOutputFactory</a></h4>
-      <section><p>An abstract factory that creates <a class="xref" href="Adrenak.UniVoice.IAudioOutput.html">IAudioOutput</a> based on
-given parameters.</p>
+      <section><p>An abstract factory that creates a concrete <a class="xref" href="Adrenak.UniVoice.IAudioOutput.html">IAudioOutput</a> </p>
 </section>
-      <h4><a class="xref" href="Adrenak.UniVoice.IChatroomAgentFactory.html">IChatroomAgentFactory</a></h4>
+      <h4><a class="xref" href="Adrenak.UniVoice.IAudioServer-1.html">IAudioServer&lt;T&gt;</a></h4>
       <section></section>
-      <h4><a class="xref" href="Adrenak.UniVoice.IChatroomNetwork.html">IChatroomNetwork</a></h4>
-      <section></section>
-    <h3 id="enums">Enums
-  </h3>
-      <h4><a class="xref" href="Adrenak.UniVoice.ChatroomAgentMode.html">ChatroomAgentMode</a></h4>
-      <section><p>Represents the mode that a <a class="xref" href="Adrenak.UniVoice.ChatroomAgent.html">ChatroomAgent</a> is in.</p>
-</section>
 </article>
           </div>
           

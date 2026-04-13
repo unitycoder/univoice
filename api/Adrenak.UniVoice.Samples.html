@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Adrenak.UniVoice.Samples
    | UniVoice documentation ">
-    <meta name="generator" content="docfx 2.57.2.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,16 +87,60 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="Adrenak.UniVoice.Samples.AndroidPermissionCallback.html">AndroidPermissionCallback</a></h4>
+      <h4><a class="xref" href="Adrenak.UniVoice.Samples.FishnetTagsSample.html">FishnetTagsSample</a></h4>
       <section></section>
-      <h4><a class="xref" href="Adrenak.UniVoice.Samples.AndroidPermissionsManager.html">AndroidPermissionsManager</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Adrenak.UniVoice.Samples.GroupVoiceCallSample.html">GroupVoiceCallSample</a></h4>
+      <h4><a class="xref" href="Adrenak.UniVoice.Samples.MirrorTagsSample.html">MirrorTagsSample</a></h4>
       <section></section>
       <h4><a class="xref" href="Adrenak.UniVoice.Samples.PeerView.html">PeerView</a></h4>
       <section></section>
       <h4><a class="xref" href="Adrenak.UniVoice.Samples.ToggleExtension.html">ToggleExtension</a></h4>
       <section></section>
+      <h4><a class="xref" href="Adrenak.UniVoice.Samples.UniVoiceFishNetSetupSample.html">UniVoiceFishNetSetupSample</a></h4>
+      <section><p>To get this setup sample to work, ensure that you have done the following:</p>
+<ul>
+<li>Import Mirror and add the UNIVOICE_NETWORK_MIRROR compilation symbol to your project</li>
+<li>If you want to use RNNoise filter, import RNNoise4Unity into your project and add UNIVOICE_FILTER_RNNOISE4UNITY</li>
+<li>Add this component to the first scene of your Unity project</li>
+</ul>
+<p>*** More info on adding and activating non packaged dependencies is here: <a href="https://github.com/adrenak/univoice?tab=readme-ov-file#activating-non-packaged-dependencies">https://github.com/adrenak/univoice?tab=readme-ov-file#activating-non-packaged-dependencies</a> ***</p>
+<p>This is a basic integration script that uses the following to setup UniVoice:</p>
+<ul>
+<li><see cref="!:MirrorServer"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioServer-1.html">IAudioServer&lt;T&gt;</a> </li>
+<li><see cref="!:MirrorClient"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioClient-1.html">IAudioClient&lt;T&gt;</a> </li>
+<li><see cref="!:UniMicInput"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioInput.html">IAudioInput</a> that captures audio from a mic</li>
+<li><a class="xref" href="Adrenak.UniVoice.EmptyAudioInput.html">EmptyAudioInput</a>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioInput.html">IAudioInput</a> that is basically
+an idle audio input used when there is no input device</li>
+<li><see cref="!:RNNoiseFilter"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a> that removes noise from
+captured audio. </li>
+<li><see cref="!:ConcentusEncodeFilter"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a> that encodes captured audio
+using Concentus (C# Opus) to reduce the size of audio frames</li>
+<li><see cref="!:ConcentusDecodeFilter"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a> that decodes incoming audio
+using Concentus to decode and make the audio frame playable.</li>
+</ul>
+</section>
+      <h4><a class="xref" href="Adrenak.UniVoice.Samples.UniVoiceMirrorSetupSample.html">UniVoiceMirrorSetupSample</a></h4>
+      <section><p>To get this setup sample to work, ensure that you have done the following:</p>
+<ul>
+<li>Import Mirror and add the UNIVOICE_NETWORK_MIRROR compilation symbol to your project</li>
+<li>If you want to use RNNoise filter, import RNNoise4Unity into your project and add UNIVOICE_FILTER_RNNOISE4UNITY</li>
+<li>Add this component to the first scene of your Unity project</li>
+</ul>
+<p>*** More info on adding and activating non packaged dependencies is here: <a href="https://github.com/adrenak/univoice?tab=readme-ov-file#activating-non-packaged-dependencies">https://github.com/adrenak/univoice?tab=readme-ov-file#activating-non-packaged-dependencies</a> ***</p>
+<p>This is a basic integration script that uses the following to setup UniVoice:</p>
+<ul>
+<li><see cref="!:MirrorServer"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioServer-1.html">IAudioServer&lt;T&gt;</a> </li>
+<li><see cref="!:MirrorClient"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioClient-1.html">IAudioClient&lt;T&gt;</a> </li>
+<li><see cref="!:UniMicInput"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioInput.html">IAudioInput</a> that captures audio from a mic</li>
+<li><a class="xref" href="Adrenak.UniVoice.EmptyAudioInput.html">EmptyAudioInput</a>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioInput.html">IAudioInput</a> that is basically
+an idle audio input used when there is no input device</li>
+<li><see cref="!:RNNoiseFilter"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a> that removes noise from
+captured audio. </li>
+<li><see cref="!:ConcentusEncodeFilter"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a> that encodes captured audio
+using Concentus (C# Opus) to reduce the size of audio frames</li>
+<li><see cref="!:ConcentusDecodeFilter"></see>, an implementation of <a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a> that decodes incoming audio
+using Concentus to decode and make the audio frame playable.</li>
+</ul>
+</section>
 </article>
           </div>
           

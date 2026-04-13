@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class PeerView
+    <title>Class Utils.Bytes
    | UniVoice documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class PeerView
+    <meta name="title" content="Class Utils.Bytes
    | UniVoice documentation ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,87 +78,77 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Adrenak.UniVoice.Samples.PeerView">
+            <article class="content wrap" id="_content" data-uid="Adrenak.UniVoice.Utils.Bytes">
   
   
-  <h1 id="Adrenak_UniVoice_Samples_PeerView" data-uid="Adrenak.UniVoice.Samples.PeerView" class="text-break">Class PeerView
+  <h1 id="Adrenak_UniVoice_Utils_Bytes" data-uid="Adrenak.UniVoice.Utils.Bytes" class="text-break">Class Utils.Bytes
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">PeerView</span></div>
+    <div class="level1"><span class="xref">Utils.Bytes</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Adrenak.UniVoice.Samples.html">Adrenak.UniVoice.Samples</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Adrenak.UniVoice.html">Adrenak.UniVoice</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Adrenak_UniVoice_Samples_PeerView_syntax">Syntax</h5>
+  <h5 id="Adrenak_UniVoice_Utils_Bytes_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PeerView : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class Bytes</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Adrenak_UniVoice_Samples_PeerView_AllowIncomingAudio_" data-uid="Adrenak.UniVoice.Samples.PeerView.AllowIncomingAudio*"></a>
-  <h4 id="Adrenak_UniVoice_Samples_PeerView_AllowIncomingAudio" data-uid="Adrenak.UniVoice.Samples.PeerView.AllowIncomingAudio">AllowIncomingAudio</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AllowIncomingAudio { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Adrenak_UniVoice_Samples_PeerView_AllowOutgoingAudio_" data-uid="Adrenak.UniVoice.Samples.PeerView.AllowOutgoingAudio*"></a>
-  <h4 id="Adrenak_UniVoice_Samples_PeerView_AllowOutgoingAudio" data-uid="Adrenak.UniVoice.Samples.PeerView.AllowOutgoingAudio">AllowOutgoingAudio</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AllowOutgoingAudio { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Adrenak_UniVoice_Samples_PeerView_DisplaySpectrum_" data-uid="Adrenak.UniVoice.Samples.PeerView.DisplaySpectrum*"></a>
-  <h4 id="Adrenak_UniVoice_Samples_PeerView_DisplaySpectrum_System_Single___" data-uid="Adrenak.UniVoice.Samples.PeerView.DisplaySpectrum(System.Single[])">DisplaySpectrum(Single[])</h4>
+  <a id="Adrenak_UniVoice_Utils_Bytes_BytesToFloats_" data-uid="Adrenak.UniVoice.Utils.Bytes.BytesToFloats*"></a>
+  <h4 id="Adrenak_UniVoice_Utils_Bytes_BytesToFloats_System_Byte___" data-uid="Adrenak.UniVoice.Utils.Bytes.BytesToFloats(System.Byte[])">BytesToFloats(Byte[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DisplaySpectrum(float[] spectrum)</code></pre>
+    <pre><code class="lang-csharp hljs">public static float[] BytesToFloats(byte[] bytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_Utils_Bytes_FloatsToBytes_" data-uid="Adrenak.UniVoice.Utils.Bytes.FloatsToBytes*"></a>
+  <h4 id="Adrenak_UniVoice_Utils_Bytes_FloatsToBytes_System_Single___" data-uid="Adrenak.UniVoice.Utils.Bytes.FloatsToBytes(System.Single[])">FloatsToBytes(Single[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] FloatsToBytes(float[] floats)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,50 +162,12 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span>[]</td>
-        <td><span class="parametername">spectrum</span></td>
+        <td><span class="parametername">floats</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Adrenak_UniVoice_Samples_PeerView_SetPeerID_" data-uid="Adrenak.UniVoice.Samples.PeerView.SetPeerID*"></a>
-  <h4 id="Adrenak_UniVoice_Samples_PeerView_SetPeerID_System_Int32_" data-uid="Adrenak.UniVoice.Samples.PeerView.SetPeerID(System.Int32)">SetPeerID(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetPeerID(int id)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="events">Events
-  </h3>
-  
-  
-  <h4 id="Adrenak_UniVoice_Samples_PeerView_OnAllowIncomingAudioChange" data-uid="Adrenak.UniVoice.Samples.PeerView.OnAllowIncomingAudioChange">OnAllowIncomingAudioChange</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;bool&gt; OnAllowIncomingAudioChange</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -225,31 +177,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Adrenak_UniVoice_Samples_PeerView_OnAllowOutgoingAudioChange" data-uid="Adrenak.UniVoice.Samples.PeerView.OnAllowOutgoingAudioChange">OnAllowOutgoingAudioChange</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;bool&gt; OnAllowOutgoingAudioChange</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Byte</span>[]</td>
         <td></td>
       </tr>
     </tbody>

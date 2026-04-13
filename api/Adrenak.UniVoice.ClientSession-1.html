@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ClientSession&lt;T&gt;
+   | UniVoice documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ClientSession&lt;T&gt;
+   | UniVoice documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Adrenak.UniVoice.ClientSession`1">
+  
+  
+  <h1 id="Adrenak_UniVoice_ClientSession_1" data-uid="Adrenak.UniVoice.ClientSession`1" class="text-break">Class ClientSession&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Handles a client session. 
+Requires implementations of <a class="xref" href="Adrenak.UniVoice.IAudioClient-1.html">IAudioClient&lt;T&gt;</a>, <a class="xref" href="Adrenak.UniVoice.IAudioInput.html">IAudioInput</a> and <a class="xref" href="Adrenak.UniVoice.IAudioOutput.html">IAudioOutput</a>.
+Handles input, output along with filters over the entire client lifecycle.
+Adjusts to changes in configuration at runtime.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ClientSession&lt;T&gt;</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Adrenak.UniVoice.html">Adrenak.UniVoice</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Adrenak_UniVoice_ClientSession_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ClientSession&lt;T&gt; : IDisposable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1__ctor_" data-uid="Adrenak.UniVoice.ClientSession`1.#ctor*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1__ctor_Adrenak_UniVoice_IAudioClient__0__Adrenak_UniVoice_IAudioInput_Adrenak_UniVoice_IAudioOutputFactory_" data-uid="Adrenak.UniVoice.ClientSession`1.#ctor(Adrenak.UniVoice.IAudioClient{`0},Adrenak.UniVoice.IAudioInput,Adrenak.UniVoice.IAudioOutputFactory)">ClientSession(IAudioClient&lt;T&gt;, IAudioInput, IAudioOutputFactory)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientSession(IAudioClient&lt;T&gt; client, IAudioInput input, IAudioOutputFactory outputFactory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Adrenak.UniVoice.IAudioClient-1.html">IAudioClient</a>&lt;T&gt;</td>
+        <td><span class="parametername">client</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Adrenak.UniVoice.IAudioInput.html">IAudioInput</a></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Adrenak.UniVoice.IAudioOutputFactory.html">IAudioOutputFactory</a></td>
+        <td><span class="parametername">outputFactory</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1__ctor_" data-uid="Adrenak.UniVoice.ClientSession`1.#ctor*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1__ctor_Adrenak_UniVoice_IAudioClient__0__Adrenak_UniVoice_IAudioInput_System_Func_Adrenak_UniVoice_IAudioOutput__" data-uid="Adrenak.UniVoice.ClientSession`1.#ctor(Adrenak.UniVoice.IAudioClient{`0},Adrenak.UniVoice.IAudioInput,System.Func{Adrenak.UniVoice.IAudioOutput})">ClientSession(IAudioClient&lt;T&gt;, IAudioInput, Func&lt;IAudioOutput&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientSession(IAudioClient&lt;T&gt; client, IAudioInput input, Func&lt;IAudioOutput&gt; outputProvider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Adrenak.UniVoice.IAudioClient-1.html">IAudioClient</a>&lt;T&gt;</td>
+        <td><span class="parametername">client</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Adrenak.UniVoice.IAudioInput.html">IAudioInput</a></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Adrenak.UniVoice.IAudioOutput.html">IAudioOutput</a>&gt;</td>
+        <td><span class="parametername">outputProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_Client_" data-uid="Adrenak.UniVoice.ClientSession`1.Client*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_Client" data-uid="Adrenak.UniVoice.ClientSession`1.Client">Client</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAudioClient&lt;T&gt; Client { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Adrenak.UniVoice.IAudioClient-1.html">IAudioClient</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_Input_" data-uid="Adrenak.UniVoice.ClientSession`1.Input*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_Input" data-uid="Adrenak.UniVoice.ClientSession`1.Input">Input</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Adrenak.UniVoice.IAudioInput.html">IAudioInput</a> that&apos;s used for sourcing outgoing audio</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAudioInput Input { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Adrenak.UniVoice.IAudioInput.html">IAudioInput</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_InputEnabled_" data-uid="Adrenak.UniVoice.ClientSession`1.InputEnabled*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_InputEnabled" data-uid="Adrenak.UniVoice.ClientSession`1.InputEnabled">InputEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether input audio will be processed. If set to false, any input audio captured by 
+<a class="xref" href="Adrenak.UniVoice.ClientSession-1.html#Adrenak_UniVoice_ClientSession_1_Input">Input</a> would be ignored and would neither be processed by the <a class="xref" href="Adrenak.UniVoice.ClientSession-1.html#Adrenak_UniVoice_ClientSession_1_InputFilters">InputFilters</a> nor send via the <a class="xref" href="Adrenak.UniVoice.ClientSession-1.html#Adrenak_UniVoice_ClientSession_1_Client">Client</a>
+This can be used to create &quot;Push to talk&quot; style features without having to use <a class="xref" href="Adrenak.UniVoice.IAudioClient-1.html#Adrenak_UniVoice_IAudioClient_1_YourVoiceSettings">YourVoiceSettings</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InputEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_InputFilters_" data-uid="Adrenak.UniVoice.ClientSession`1.InputFilters*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_InputFilters" data-uid="Adrenak.UniVoice.ClientSession`1.InputFilters">InputFilters</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a> that will be applied to the outgoing audio for all the peers.
+Note that filters are executed in the order they are present in this list</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;IAudioFilter&gt; InputFilters { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_OutputFactory_" data-uid="Adrenak.UniVoice.ClientSession`1.OutputFactory*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_OutputFactory" data-uid="Adrenak.UniVoice.ClientSession`1.OutputFactory">OutputFactory</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Adrenak.UniVoice.IAudioOutputFactory.html">IAudioOutputFactory</a> that creates the <a class="xref" href="Adrenak.UniVoice.IAudioOutput.html">IAudioOutput</a> of peers</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAudioOutputFactory OutputFactory { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Adrenak.UniVoice.IAudioOutputFactory.html">IAudioOutputFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_OutputFilters_" data-uid="Adrenak.UniVoice.ClientSession`1.OutputFilters*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_OutputFilters" data-uid="Adrenak.UniVoice.ClientSession`1.OutputFilters">OutputFilters</h4>
+  <div class="markdown level1 summary"><p>The output <a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a> that will be applied to the incoming audio for all the peers.
+Note that filters are executed in the order they are present in this list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;OutputFilters has been removed. Use AddOutputFilter and RemoveOutputFilter instead.&quot;, true)]
+public List&lt;IAudioFilter&gt; OutputFilters { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_OutputProvider_" data-uid="Adrenak.UniVoice.ClientSession`1.OutputProvider*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_OutputProvider" data-uid="Adrenak.UniVoice.ClientSession`1.OutputProvider">OutputProvider</h4>
+  <div class="markdown level1 summary"><p>The provider of IAudioOutput objects for peers.
+If this value is being set while peers already exist,
+the old outputs would be cleared and new onces will 
+be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;IAudioOutput&gt; OutputProvider { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Adrenak.UniVoice.IAudioOutput.html">IAudioOutput</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_OutputsEnabled_" data-uid="Adrenak.UniVoice.ClientSession`1.OutputsEnabled*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_OutputsEnabled" data-uid="Adrenak.UniVoice.ClientSession`1.OutputsEnabled">OutputsEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether any incoming audio from peers would be processed. If set to false, all incoming peer audio is ignored, and would
+neither be processed by the <a class="xref" href="Adrenak.UniVoice.ClientSession-1.html#Adrenak_UniVoice_ClientSession_1_OutputFilters">OutputFilters</a> nor output to the <a class="xref" href="Adrenak.UniVoice.IAudioOutput.html">IAudioOutput</a> of any peer.
+This can be used to easily mute all the peers on the network.
+Note that this doesn&apos;t stop the audio data from arriving and would consume bandwidth. To stop reception completely
+by telling the server to not send audio, use <a class="xref" href="Adrenak.UniVoice.IAudioClient-1.html#Adrenak_UniVoice_IAudioClient_1_YourVoiceSettings">YourVoiceSettings</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OutputsEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_PeerOutputs_" data-uid="Adrenak.UniVoice.ClientSession`1.PeerOutputs*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_PeerOutputs" data-uid="Adrenak.UniVoice.ClientSession`1.PeerOutputs">PeerOutputs</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Adrenak.UniVoice.IAudioOutput.html">IAudioOutput</a> instances of each peer in the session</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;T, IAudioOutput&gt; PeerOutputs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;T, <a class="xref" href="Adrenak.UniVoice.IAudioOutput.html">IAudioOutput</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_AddOutputFilter_" data-uid="Adrenak.UniVoice.ClientSession`1.AddOutputFilter*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_AddOutputFilter__1_System_Func_Adrenak_UniVoice_IAudioFilter__" data-uid="Adrenak.UniVoice.ClientSession`1.AddOutputFilter``1(System.Func{Adrenak.UniVoice.IAudioFilter})">AddOutputFilter&lt;TFilter&gt;(Func&lt;IAudioFilter&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an filter to the output audio. Note: it is possible to register the same
+filter type more than once, this can be used to create some effects but can also cause
+errors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddOutputFilter&lt;TFilter&gt;(Func&lt;IAudioFilter&gt; filterFactory)
+    where TFilter : IAudioFilter</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Adrenak.UniVoice.IAudioFilter.html">IAudioFilter</a>&gt;</td>
+        <td><span class="parametername">filterFactory</span></td>
+        <td><p>A lambda method that returns an instance of the filter type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TFilter</span></td>
+        <td><p>The type of the filter to be added</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_Dispose_" data-uid="Adrenak.UniVoice.ClientSession`1.Dispose*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_Dispose" data-uid="Adrenak.UniVoice.ClientSession`1.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_HasInputFilter_" data-uid="Adrenak.UniVoice.ClientSession`1.HasInputFilter*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_HasInputFilter__1" data-uid="Adrenak.UniVoice.ClientSession`1.HasInputFilter``1">HasInputFilter&lt;TFilter&gt;()</h4>
+  <div class="markdown level1 summary"><p>Checks if an input audio filter of a specific type has been registered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasInputFilter&lt;TFilter&gt;()
+    where TFilter : IAudioFilter</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the filter is registered, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TFilter</span></td>
+        <td><p>The type of the filter to check</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_HasOutputFilter_" data-uid="Adrenak.UniVoice.ClientSession`1.HasOutputFilter*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_HasOutputFilter__1" data-uid="Adrenak.UniVoice.ClientSession`1.HasOutputFilter``1">HasOutputFilter&lt;TFilter&gt;()</h4>
+  <div class="markdown level1 summary"><p>Checks if an output audio filter of a specific type has been registered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasOutputFilter&lt;TFilter&gt;()
+    where TFilter : IAudioFilter</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the filter is registered, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TFilter</span></td>
+        <td><p>The type of the filter to check</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Adrenak_UniVoice_ClientSession_1_RemoveOutputFilter_" data-uid="Adrenak.UniVoice.ClientSession`1.RemoveOutputFilter*"></a>
+  <h4 id="Adrenak_UniVoice_ClientSession_1_RemoveOutputFilter__1" data-uid="Adrenak.UniVoice.ClientSession`1.RemoveOutputFilter``1">RemoveOutputFilter&lt;TFilter&gt;()</h4>
+  <div class="markdown level1 summary"><p>Removes a previously registered output audio filter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveOutputFilter&lt;TFilter&gt;()
+    where TFilter : IAudioFilter</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TFilter</span></td>
+        <td><p>The type of the filter to be removed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            UniVoice documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
